@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avto Bozor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🚗 Avto Bozor</h1>
+
+      <input
+        type="text"
+        id="search"
+        placeholder="Qidirish..."
+        oninput="searchCars()" />
+
+      <div class="auth-buttons">
+        <button onclick="location.href = './pages/login.html'">Login</button>
+
+        <button onclick="location.href = './pages/register.html'">
+          Register
+        </button>
+
+        <button onclick="goAdd()">+ E'lon berish</button>
+      </div>
+    </header>
+    <main id="cars"></main>
+    <footer>
+      <div class="footer-container">
+        <div>
+          <h3>🚗 Avto Bozor</h3>
+          <p>Eng yaxshi avtomobil e’lonlar platformasi</p>
+        </div>
+
+        <div>
+          <h4>Bo‘limlar</h4>
+          <a href="#">Bosh sahifa</a>
+          <a href="#">E’lonlar</a>
+          <a href="#">Login</a>
+        </div>
+
+        <div>
+          <h4>Aloqa</h4>
+          <p>📞 +998 90 123 45 67</p>
+          <p>📧 info@avtobozor.uz</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Avto Bozor. Barcha huquqlar himoyalangan.</p>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

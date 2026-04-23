@@ -1,0 +1,73 @@
+/* Umumiy sahifa */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Sarlavha */
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #171e21;
+  letter-spacing: 1px;
+}
+
+/* Inputlar konteyneri */
+input {
+  width: 320px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  background: #1e293b;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+/* focus effekti */
+input:focus {
+  background: #0f172a;
+  border: 1px solid #38bdf8;
+  transform: scale(1.02);
+}
+
+/* Tugma */
+button {
+  width: 340px;
+  margin-top: 15px;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover */
+button:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* mobile responsive */
+@media (max-width: 400px) {
+  input,
+  button {
+    width: 90%;
+  }
+}

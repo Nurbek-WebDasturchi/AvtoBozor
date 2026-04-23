@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batafsil</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      body {
+        background: #f5f5f5;
+        font-family: sans-serif;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .container img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .title {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: green;
+        margin: 15px 0;
+      }
+
+      .back-btn {
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        background: #333;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .back-btn:hover {
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="detail">
+      <!-- JS shu yerga ma'lumot joylaydi -->
+    </div>
+
+    <div style="text-align: center">
+      <button class="back-btn" onclick="back()">⬅ Orqaga</button>
+    </div>
+
+    <script src="../js/app.js"></script>
+  </body>
+</html>

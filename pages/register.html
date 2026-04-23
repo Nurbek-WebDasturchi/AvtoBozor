@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+
+  <body>
+    <div class="auth-box">
+      <h2>Ro‘yxatdan o‘tish</h2>
+
+      <input id="regName" placeholder="Ism" />
+      <input id="regEmail" placeholder="Email" />
+      <input id="regPassword" type="password" placeholder="Parol" />
+
+      <button onclick="register()">Ro‘yxatdan o‘tish</button>
+
+      <p>
+        Akkount bormi?
+        <a href="./login.html">Login</a>
+      </p>
+    </div>
+
+    <script>
+      function register() {
+        let name = document.getElementById("regName").value;
+        let email = document.getElementById("regEmail").value;
+        let password = document.getElementById("regPassword").value;
+
+        if (!name || !email || !password) {
+          alert("Barcha maydonlarni to‘ldiring!");
+          return;
+        }
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        let exists = users.find((u) => u.email === email);
+        if (exists) {
+          alert("Bu email allaqachon mavjud!");
+          return;
+        }
+
+        users.push({
+          id: Date.now(),
+          name,
+          email,
+          password,
+        });
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Muvaffaqiyatli ro‘yxatdan o‘tildi!");
+        window.location = "./login.html";
+      }
+    </script>
+  </body>
+</html>
